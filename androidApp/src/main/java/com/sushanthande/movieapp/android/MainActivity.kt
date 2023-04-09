@@ -30,6 +30,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         mainScope.launch {
             kotlin.runCatching {
                 movieSDK.getPopularMovies()
@@ -66,7 +67,6 @@ class MainActivity : ComponentActivity() {
             }.onFailure {
                 Toast.makeText(this@MainActivity, it.localizedMessage, Toast.LENGTH_SHORT).show()
             }
-
         }
     }
 
@@ -87,12 +87,12 @@ fun MovieGrid(
                 ) {
                     GlideImage(
                         imageModel = movie.getImagePath(),
-                        contentScale = ContentScale.Fit,
+                        contentScale = ContentScale.Crop,
                         modifier = modifier
                             .width(150.dp)
                             .height(200.dp)
-                            .clip(RoundedCornerShape(10.dp))
                             .padding(5.dp)
+                            .clip(RoundedCornerShape(percent = 8)),
                     )
                 }
             }

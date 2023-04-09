@@ -19,6 +19,7 @@ class MovieApi {
             json(Json {
                 ignoreUnknownKeys = true
                 useAlternativeNames = false
+                coerceInputValues = true
             })
         }
     }

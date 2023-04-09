@@ -5,7 +5,7 @@ import com.sushanthande.movieapp.network.AppConstant.POSTER_BASE_URL
 @kotlinx.serialization.Serializable
 data class Result(
     val adult: Boolean,
-    val backdrop_path: String,
+    val backdrop_path: String  = "",
     val genre_ids: List<Int>,
     val id: Int,
     val original_language: String,

@@ -57,8 +57,10 @@ struct MovieItem : View {
     var image: String
     var body: some View {
         AsyncImage(url: URL(string: image))
-            .frame(width: 150, height: 200, alignment: .bottom)
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 150, height: 200, alignment: .center)
             .cornerRadius(8)
+        
     }
 }
 
