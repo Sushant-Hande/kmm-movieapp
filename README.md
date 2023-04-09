@@ -10,8 +10,8 @@ This app demonstrate that how Kotlin Multiplatform Mobile SDK can be used to dev
     <th>iOS version</th>
   </tr>
   <tr>
-    <td><img src="screenshots/android-movieapp.png"/></td>
-    <td><img src="screenshots/iOS-movieapp.png"/></td>
+    <td><img src="screenshots/android-movieapp.png" height="400" width="200"/></td>
+    <td><img src="screenshots/iOS-movieapp.png" height="400" width="200"/></td>
   </tr>
 </table>
 
